@@ -83,3 +83,21 @@ x = b'hello' # bytes
 x = bytearray(5)    # bytearray
 x = memoryview(bytes(5))    # memeryview
 x = None  #nonetypes
+
+
+# Conditionals
+
+conditionX = 0
+conditionY = 5
+
+if conditionX < conditionY:
+   print('yes')
+
+if conditionY < conditionX:
+    print('yes')
+
+if conditionX:
+    print('yes')
+
+if conditionY:
+    print('yes')
