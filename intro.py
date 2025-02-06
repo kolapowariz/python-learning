@@ -101,3 +101,17 @@ if conditionX:
 
 if conditionY:
     print('yes')
+
+
+name = ''
+
+if name == 'Joe':
+    print('Hello Joe')
+elif name == 'Wariz':
+    print('Hello Wariz')
+elif name == 'Sally':
+    print('Hello Sally')
+elif name == 'Dimeji':
+    print('Hello Dimeji')
+else:
+    print('I dont know you')
