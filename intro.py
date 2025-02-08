@@ -115,3 +115,45 @@ elif name == 'Dimeji':
     print('Hello Dimeji')
 else:
     print('I dont know you')
+
+if 'foo' in ['bar', 'baz', 'qux', 'foo']:
+    print('Expression is true')
+    print('Executing statement in suite')
+    print('...')
+    print('Done')
+print('After conditional')
+
+if 'wariz' in ['wariz', 'samad']:
+    print('Outer condition is true')
+
+    if 10 > 20:
+        print('inner condition 1')
+
+    print('Between inner conditions')
+
+    if 10 < 20:
+        print('Inner condition 2')
+
+    print('End of outer condition')
+
+print('After outer condition')
+
+
+if 'f' in 'foo': print(1); print(2); print(3)
+
+# Python ternary operator
+
+raining = False
+print('lets go to the', 'beach' if raining else 'library')
+
+raining = True
+print('lets go to the', 'beach' if  raining else 'library')
+
+age = 12
+s = 'minor' if age < 21 else 'adult'
+print(s)
+
+if True:
+    pass
+
+print('foo')
