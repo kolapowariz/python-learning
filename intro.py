@@ -170,3 +170,33 @@ match command:
         print('See you later!')
     case other:
         print('No match found')
+
+
+# Loops in python
+
+# while loops
+
+cnt = 0
+while (cnt < 3):
+    cnt = cnt + 1
+    print('Hello Geek')
+    print(cnt)
+
+
+# while loop with else statement
+
+cn = 0
+while (cn < 3):
+    cn = cn + 1
+    print('Hello Geek')
+else:
+    print('In else block')
+
+
+
+# for loop
+
+n = 4
+
+for i in range(0, n):
+    print(i)
