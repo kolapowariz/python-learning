@@ -1,3 +1,4 @@
+from __future__ import print_function
 # Basic Syntax
 name = 'Wariz'
 print(name)
@@ -200,3 +201,60 @@ n = 4
 
 for i in range(0, n):
     print(i)
+
+
+li = ['geeks', 'for', 'geeks']
+
+for i in li:
+    print(i)
+
+
+tup = ('geeks', 'for', 'geeks')
+for i in tup:
+    print(i)
+
+
+s = 'geek'
+for i in s:
+    print(i)
+
+d = dict({'x': 123, 'y': 345})
+
+for i in d:
+    print('%s   %d' % (i, d[i]))
+
+
+set1 = {1, 2, 3, 4, 5, 6}
+
+for i in set1:
+    print(i)
+
+list = ['geek', 'for', 'geek']
+
+for index in range(len(list)):
+    print(list[index])
+
+
+
+for i in range(1, 5):
+    for j in range(i):
+        print(i, end=' ')
+    print()
+
+
+# Continue statement
+
+for letter in 'geeksforgeeks':
+    if letter == 'e' or letter == 's':
+        continue
+    print('Current letter:', letter)
+
+for letter in 'geeksforgeeks':
+    if letter == 'e' or letter == 's':
+        break
+print('Current letter :', letter)
+
+
+for letter in 'geeksforgeeks':
+    pass
+print('Last Letter :', letter)
