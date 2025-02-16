@@ -258,3 +258,11 @@ print('Current letter :', letter)
 for letter in 'geeksforgeeks':
     pass
 print('Last Letter :', letter)
+
+
+n = 5
+
+while n > 0:
+    n -= 1
+    print(n)
+
