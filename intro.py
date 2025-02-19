@@ -266,3 +266,32 @@ while n > 0:
     n -= 1
     print(n)
 
+
+# type conversion
+
+# implicit type conversion
+integer_number = 123
+float_number = 1.23
+
+new_number = integer_number + float_number
+
+print('Value:', new_number)
+print('Data type:', type(new_number))
+
+# explicit type conversion
+
+num_string = '12'
+num_integer = 23
+
+print('Data type of num_string before Type casting:', type(num_string))
+
+# explicit conversion
+
+num_string = int(num_string)
+
+print('Data type of num_string after type casting:', type(num_string))
+
+NUM_SUM = num_integer + num_string
+
+print('Sum:', NUM_SUM)
+print('Data type of NUM_SUM:', type(NUM_SUM))
