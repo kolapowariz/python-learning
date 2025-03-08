@@ -295,3 +295,7 @@ NUM_SUM = num_integer + num_string
 
 print('Sum:', NUM_SUM)
 print('Data type of NUM_SUM:', type(NUM_SUM))
+
+
+
+# Error handling
