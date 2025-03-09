@@ -299,3 +299,53 @@ print('Data type of NUM_SUM:', type(NUM_SUM))
 
 
 # Error handling
+# view all built-in exceptions
+print(dir(locals()['__builtins__']))
+
+
+# exception handling
+
+try:
+    numerator = 10
+    denominator = 0
+
+    result = numerator / denominator
+    print(result)
+
+except:
+    print('Error: Denominator cannot be 0.')
+
+
+try:
+
+    even_number = [2, 4, 6, 8]
+    print(even_number[5])
+except ZeroDivisionError:
+    print('Denominator cannot be 0.')
+except IndexError:
+    print('Index out of range.')
+
+# try with else clause
+
+try:
+    num = int(input('Enter a number: '))
+    assert num % 2 == 0
+except: 
+    print('Not an even number!')
+else:
+    reciprocal = 1 / num
+    print('Reciprocal:', reciprocal)
+
+
+# try with finally clause
+
+try:
+    numerator = 10
+    denominator = 0
+
+    result = numerator / denominator
+    print(result)
+except:
+    print('Error: Denominator cannot be 0.')
+finally:
+    print('This is finally block.')
