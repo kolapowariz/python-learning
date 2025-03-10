@@ -349,3 +349,135 @@ except:
     print('Error: Denominator cannot be 0.')
 finally:
     print('This is finally block.')
+
+
+
+# Functions
+
+def greet(name):
+    print('Hello', name)
+    print(f'Hello {name} Kolapo')
+
+greet('Wariz')
+
+def abs (num):
+    # return num if num > 0 else -num
+
+    if num > 0:
+        return num
+    else:
+        return -num
+
+print(abs(10))
+print(abs(-10))
+
+
+# Arbitrary arguments
+
+def my_function(*kids):
+    print('The youngest child is ' + kids[1])
+
+my_function('Emil', 'Tobias', 'Linus')
+
+
+# Keyword arguments
+
+def keyword_function(child3, child2, child1):
+    print('The youngest child is '  + child3)
+    print('The youngest child is '  + child2)
+    print('The youngest child is '  + child1)
+
+
+keyword_function(child1='Wariz', child2='Samad', child3='Kolapo')
+
+# Arbitrary keyword arguments
+
+def arbitrary_keyword_function(**kid):
+    print('His last name is ' + kid['lname'])
+
+arbitrary_keyword_function(fname = 'James', lname = 'Bond')
+
+
+# Default parameter value
+
+def default_function(country = 'Norway'):
+    print('I am from ' + country)
+
+default_function('Sweden')
+default_function('Senegal')
+default_function()
+default_function('Nigeria')
+
+
+# Passing a list as an argument
+
+def list_function(food):
+    for x in food:
+        print(x)
+
+fruits = ['apple', 'banana', 'cherry']
+
+list_function(fruits)
+
+
+# Return values
+
+def return_function(x):
+    return 5 * x
+
+
+print(return_function(5))
+
+# The pass statement
+
+def pass_function():
+    pass
+
+print(pass_function())
+
+
+# Positional-only Arguments
+
+def positional_function(x, /):
+    print(x)
+
+positional_function(3)
+
+def positional_function2(x):
+    print(x)
+
+positional_function2(x = 3)
+
+
+# def positional_function3(x, /):
+#     print(x)
+
+# positional_function3(x = 3)
+
+# Keyword only Arguments
+
+def keyword_only_function(*, x):
+    print(x)
+
+keyword_only_function(x = 7)
+
+
+def positional_and_keyword_function(a, b, /, *, c, d):
+    print(a + b + c + d)
+
+positional_and_keyword_function(5, 6, c = 7, d = 8)
+
+
+# Recursion
+
+def tri_recursion(k):
+    if(k > 0):
+        result = k + tri_recursion(k - 1)
+        print(result)
+    else:
+        result = 0
+
+    return result
+
+print('Recursion Example Results:')
+tri_recursion(5)
