@@ -1,4 +1,6 @@
 from __future__ import print_function
+# import pandas as pd
+
 # Basic Syntax
 name = 'Wariz'
 print(name)
@@ -327,14 +329,14 @@ except IndexError:
 
 # try with else clause
 
-try:
-    num = int(input('Enter a number: '))
-    assert num % 2 == 0
-except: 
-    print('Not an even number!')
-else:
-    reciprocal = 1 / num
-    print('Reciprocal:', reciprocal)
+# try:
+#     num = int(input('Enter a number: '))
+#     assert num % 2 == 0
+# except: 
+#     print('Not an even number!')
+# else:
+#     reciprocal = 1 / num
+#     print('Reciprocal:', reciprocal)
 
 
 # try with finally clause
@@ -481,3 +483,27 @@ def tri_recursion(k):
 
 print('Recursion Example Results:')
 tri_recursion(5)
+
+
+# Lists
+
+x_list = [1, 3, 3, 7]
+print(type(x_list))
+print(x_list)
+x_tuple = (1, 3, 3, 7)
+print(type(x_tuple))
+print(x_tuple)
+x_set = {1, 3, 3, 7}
+print(type(x_set))
+print(x_set)
+
+
+color = ['blue', 'green', 'red', 'yellow']
+fruit = ['blueberry', 'apple', 'cherry', 'banana']
+
+
+# df = pd.DataFrame(columns=['color', 'fruit'])
+
+# df['color'], df['fruit']= color, fruit
+
+# print(df)
