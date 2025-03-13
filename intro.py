@@ -525,3 +525,8 @@ p, q, r = t
 print(p)
 print(q)
 print(r)
+
+
+first, *second = t
+print(first)
+print(second)
