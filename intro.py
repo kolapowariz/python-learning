@@ -530,3 +530,38 @@ print(r)
 first, *second = t
 print(first)
 print(second)
+
+
+# Sets
+
+A = {1, 2, 3, 4, 5}
+B = {4, 5, 6, 7, 8}
+
+
+# Set Union
+print(A.union(B))
+print(A | B)
+
+
+# Set intersection
+print(A.intersection(B))
+print(A & B)
+
+# Set difference
+print(B.difference(A))
+print (B - A)
+
+# Set symemetric difference
+print(A.symmetric_difference(B))
+
+
+this_set = {'apple', 'banana', True, False, 1, 0}
+print(this_set)
+
+
+print(len(this_set))
+print(type(this_set))
+
+
+set_constructor = set(('apple', 'cherry', 1, True, False, 0, 32))
+print(set_constructor)
