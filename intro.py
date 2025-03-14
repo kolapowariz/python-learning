@@ -231,10 +231,10 @@ set1 = {1, 2, 3, 4, 5, 6}
 for i in set1:
     print(i)
 
-list = ['geek', 'for', 'geek']
+lists = ['geek', 'for', 'geek']
 
-for index in range(len(list)):
-    print(list[index])
+for index in range(len(lists)):
+    print(lists[index])
 
 
 
@@ -565,3 +565,71 @@ print(type(this_set))
 
 set_constructor = set(('apple', 'cherry', 1, True, False, 0, 32))
 print(set_constructor)
+
+
+# Dictionary
+
+tel = {'jack': 4098, 'sape': 4139}
+tel['guido'] = 4127
+print(tel)
+print(tel['jack'])
+del tel['sape']
+print(tel)
+tel['irv'] = 4127
+print(tel)
+print(sorted(tel))
+print(list(tel))
+
+print('guido' in tel)
+
+print('jack' not in tel)
+
+dicts = dict([('sape', 4), ('wariz', 'samad')])
+print(dicts)
+
+print({x: x**2 for x in (2, 4, 6)})
+
+
+# Looping dict
+
+knights = {'gallahad': 'the pure', 'robin': 'the brave'}
+
+for k, v in knights.items():
+    print(k + '----------------- ' + v)
+
+for i, j in enumerate(['tic', 'tac', 'toe']):
+    print(i, j)
+
+for k, l in enumerate(knights):
+    print(k, l)
+
+questions = ['name', 'quest', 'favorite color']
+answers = ['lancelot', 'the holy grail', 'blue']
+
+for q, a in zip(questions, answers):
+    print(q, a)
+    print('What is your {0}? It is {1}.'.format(q, a))
+
+for i in reversed(range(1, 10, 2)):
+    print(i)
+
+basket = ['apple', 'orange', 'apple', 'pear', 'orange', 'banana']
+
+for i in sorted(basket):
+    print(i)
+
+for j in sorted(set(basket)):
+    print(j)
+
+
+import math
+
+raw_data = [56.2, float('NaN'), 51.7, 55.3, 52.5,float('NaN'), 47.8]
+filtered_data = []
+for value in raw_data:
+    if not math.isnan(value):
+        print(value)
+        filtered_data.append(value)
+
+
+print(filtered_data)
