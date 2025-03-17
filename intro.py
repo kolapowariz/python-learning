@@ -1,5 +1,5 @@
-from __future__ import print_function
-# import pandas as pd
+# from __future__ import print_function
+import fibo
 
 # Basic Syntax
 name = 'Wariz'
@@ -633,3 +633,9 @@ for value in raw_data:
 
 
 print(filtered_data)
+
+
+# Modules
+
+result1 = fibo.add(10, 5)
+print(result1)
