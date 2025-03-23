@@ -1,5 +1,9 @@
-# from __future__ import print_function
+from __future__ import print_function
 import fibo
+import fibo as fb
+import platform
+from mod import greeting
+from mod import person1
 
 # Basic Syntax
 name = 'Wariz'
@@ -638,4 +642,25 @@ print(filtered_data)
 # Modules
 
 result1 = fibo.add(10, 5)
-print(result1)
+print('result from fibo add function = ', result1)
+
+# Renaming a module
+result2 = fb.sub(10, 5)
+print('result from fb sub function = ', result2)
+
+
+x = platform.system()
+print(x)
+
+y = platform.python_version()
+print(y)
+
+z = dir(platform)
+print(z)
+
+
+# Import from module
+
+print(greeting('Wariz'))
+print(person1)
+print(person1['age'])

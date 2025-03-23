@@ -1,14 +1,8 @@
-s = "If Comrade Napoleon says it, it must be right."
-a = [100, 200, 300]
+def greeting(name):
+  print("Hello, " + name)
 
-def foo(arg):
-    print(f'arg = {arg}')
-
-class Foo:
-    pass
-
-print(s)
-print(a)
-foo('quux')
-x = Foo()
-print(x)
+person1 = {
+  "name": "John",
+  "age": 36,
+  "country": "Norway"
+}
