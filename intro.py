@@ -664,3 +664,45 @@ print(z)
 print(greeting('Wariz'))
 print(person1)
 print(person1['age'])
+
+
+# Lambda function
+
+lam_A = lambda a : a + 10
+print(f'Lambda function = {lam_A(5)}')
+
+lam_B =lambda a, b: a * b
+print(f'Lambda function 2 = {lam_B(5, 2)}')
+
+# Power of lambda
+
+def lam_C (n):
+    return lambda a : a * n
+
+mydoubler = lam_C(5)
+print(mydoubler(4))
+
+
+def lam_C ():
+    return lambda a: a + 4
+
+double = lam_C()
+print(double(3))
+
+print((lambda x: x * 2)(2))
+
+fullname = lambda first, second: f'Full name: {first.upper()} {second}'
+print(fullname('wariz', 'kolapo'))
+
+
+def my_map(my_func, my_iter):
+    result = []
+    for item in my_iter:
+        new_item = my_func(item)
+        result.append(new_item)
+    return result
+
+nums = [3, 4, 5, 6, 7]
+
+cubed = my_map(lambda x: x**3, nums)
+print(cubed)
