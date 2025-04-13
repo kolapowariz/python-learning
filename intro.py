@@ -1,708 +1,904 @@
-from __future__ import print_function
-import fibo
-import fibo as fb
-import platform
-from mod import greeting
-from mod import person1
+# from __future__ import print_function
+# import fibo
+# import fibo as fb
+# import platform
+# from mod import greeting
+# from mod import person1
 
-# Basic Syntax
-name = 'Wariz'
-print(name)
+# # Basic Syntax
+# name = 'Wariz'
+# print(name)
 
 
-# Variables and Data types
-x = 5
-print(x)
+# # Variables and Data types
+# x = 5
+# print(x)
 
-a = str(3)
-b = int(3)
-c = float (3)
+# a = str(3)
+# b = int(3)
+# c = float (3)
 
-print(type(a))
-print(type(b))
-print(type(c))
+# print(type(a))
+# print(type(b))
+# print(type(c))
 
-d = 4
-D = 'Sallly'
+# d = 4
+# D = 'Sallly'
 
-print(d)
-print(D)
+# print(d)
+# print(D)
 
-e, f, g = 'Orange', 'Banana', "Cherry"
-print(e)
-print(f)
-print(g)
+# e, f, g = 'Orange', 'Banana', "Cherry"
+# print(e)
+# print(f)
+# print(g)
 
-h = i = j = 'Orange'
-print(h)
-print(i)
-print(j)
+# h = i = j = 'Orange'
+# print(h)
+# print(i)
+# print(j)
 
-fruits = ['apple', 'banana', 'cherry']
-k, l, m = fruits
-print(k)
-print(l)
-print(m)
+# fruits = ['apple', 'banana', 'cherry']
+# k, l, m = fruits
+# print(k)
+# print(l)
+# print(m)
 
-n = "Python"
-o = 'is'
-p = 'awesome'
+# n = "Python"
+# o = 'is'
+# p = 'awesome'
 
-print (n, o, p)
-print (n + o + p)
+# print (n, o, p)
+# print (n + o + p)
 
-q = 5
-r = 'John'
-print(q, r)
+# q = 5
+# r = 'John'
+# print(q, r)
 
-s = 'awesome'
+# s = 'awesome'
 
-def myFunc():
-  s = 'fantastic'
-  print('Python is ' + s)
+# def myFunc():
+#   s = 'fantastic'
+#   print('Python is ' + s)
 
-myFunc()
+# myFunc()
 
-print('Python is ' + s)
+# print('Python is ' + s)
 
-def myfunc():
-    global t
-    t = 'fantastic'
+# def myfunc():
+#     global t
+#     t = 'fantastic'
 
-myfunc()
-print('Python is ' + t)
+# myfunc()
+# print('Python is ' + t)
 
 
-# Data Types
+# # Data Types
 
-u = 'Hello Wariz'  # string
-v = 20 # int
-w = 20.5  # float
-x = 1j  # complex
-x = ['apple', 'banana', 'cherry']   # list
-x = ('apple', 'banana', 'cherry')   #tuple
-x = range(6)  # range
-x = {'name': 'John', 'age': 36}   # dict
-x = {'apple', 'banana', 'cherry'}   # set
-x = frozenset({'apple', 'banana,' 'cherry'})    # frozenset
-x = True  # bool
-x = b'hello' # bytes
-x = bytearray(5)    # bytearray
-x = memoryview(bytes(5))    # memeryview
-x = None  #nonetypes
+# u = 'Hello Wariz'  # string
+# v = 20 # int
+# w = 20.5  # float
+# x = 1j  # complex
+# x = ['apple', 'banana', 'cherry']   # list
+# x = ('apple', 'banana', 'cherry')   #tuple
+# x = range(6)  # range
+# x = {'name': 'John', 'age': 36}   # dict
+# x = {'apple', 'banana', 'cherry'}   # set
+# x = frozenset({'apple', 'banana,' 'cherry'})    # frozenset
+# x = True  # bool
+# x = b'hello' # bytes
+# x = bytearray(5)    # bytearray
+# x = memoryview(bytes(5))    # memeryview
+# x = None  #nonetypes
 
 
-# Conditionals
+# # Conditionals
 
-conditionX = 0
-conditionY = 5
+# conditionX = 0
+# conditionY = 5
 
-if conditionX < conditionY:
-   print('yes')
+# if conditionX < conditionY:
+#    print('yes')
 
-if conditionY < conditionX:
-    print('yes')
+# if conditionY < conditionX:
+#     print('yes')
 
-if conditionX:
-    print('yes')
+# if conditionX:
+#     print('yes')
 
-if conditionY:
-    print('yes')
+# if conditionY:
+#     print('yes')
 
 
-name = ''
+# name = ''
 
-if name == 'Joe':
-    print('Hello Joe')
-elif name == 'Wariz':
-    print('Hello Wariz')
-elif name == 'Sally':
-    print('Hello Sally')
-elif name == 'Dimeji':
-    print('Hello Dimeji')
-else:
-    print('I dont know you')
+# if name == 'Joe':
+#     print('Hello Joe')
+# elif name == 'Wariz':
+#     print('Hello Wariz')
+# elif name == 'Sally':
+#     print('Hello Sally')
+# elif name == 'Dimeji':
+#     print('Hello Dimeji')
+# else:
+#     print('I dont know you')
 
-if 'foo' in ['bar', 'baz', 'qux', 'foo']:
-    print('Expression is true')
-    print('Executing statement in suite')
-    print('...')
-    print('Done')
-print('After conditional')
+# if 'foo' in ['bar', 'baz', 'qux', 'foo']:
+#     print('Expression is true')
+#     print('Executing statement in suite')
+#     print('...')
+#     print('Done')
+# print('After conditional')
 
-if 'wariz' in ['wariz', 'samad']:
-    print('Outer condition is true')
+# if 'wariz' in ['wariz', 'samad']:
+#     print('Outer condition is true')
 
-    if 10 > 20:
-        print('inner condition 1')
+#     if 10 > 20:
+#         print('inner condition 1')
 
-    print('Between inner conditions')
+#     print('Between inner conditions')
 
-    if 10 < 20:
-        print('Inner condition 2')
+#     if 10 < 20:
+#         print('Inner condition 2')
 
-    print('End of outer condition')
+#     print('End of outer condition')
 
-print('After outer condition')
+# print('After outer condition')
 
 
-if 'f' in 'foo': print(1); print(2); print(3)
+# if 'f' in 'foo': print(1); print(2); print(3)
 
-# Python ternary operator
+# # Python ternary operator
 
-raining = False
-print('lets go to the', 'beach' if raining else 'library')
+# raining = False
+# print('lets go to the', 'beach' if raining else 'library')
 
-raining = True
-print('lets go to the', 'beach' if  raining else 'library')
+# raining = True
+# print('lets go to the', 'beach' if  raining else 'library')
 
-age = 12
-s = 'minor' if age < 21 else 'adult'
-print(s)
+# age = 12
+# s = 'minor' if age < 21 else 'adult'
+# print(s)
 
-if True:
-    pass
+# if True:
+#     pass
 
-print('foo')
+# print('foo')
 
 
-# match case statement
+# # match case statement
 
-command = ''
+# command = ''
 
-match command:
-    case 'Hello, World':
-        print('Hello to you too!')
-    case 'Goodbye, World!':
-        print('See you later!')
-    case other:
-        print('No match found')
+# match command:
+#     case 'Hello, World':
+#         print('Hello to you too!')
+#     case 'Goodbye, World!':
+#         print('See you later!')
+#     case other:
+#         print('No match found')
 
 
-# Loops in python
+# # Loops in python
 
-# while loops
+# # while loops
 
-cnt = 0
-while (cnt < 3):
-    cnt = cnt + 1
-    print('Hello Geek')
-    print(cnt)
+# cnt = 0
+# while (cnt < 3):
+#     cnt = cnt + 1
+#     print('Hello Geek')
+#     print(cnt)
 
 
-# while loop with else statement
+# # while loop with else statement
 
-cn = 0
-while (cn < 3):
-    cn = cn + 1
-    print('Hello Geek')
-else:
-    print('In else block')
+# cn = 0
+# while (cn < 3):
+#     cn = cn + 1
+#     print('Hello Geek')
+# else:
+#     print('In else block')
 
 
 
-# for loop
+# # for loop
 
-n = 4
+# n = 4
 
-for i in range(0, n):
-    print(i)
+# for i in range(0, n):
+#     print(i)
 
 
-li = ['geeks', 'for', 'geeks']
+# li = ['geeks', 'for', 'geeks']
 
-for i in li:
-    print(i)
+# for i in li:
+#     print(i)
 
 
-tup = ('geeks', 'for', 'geeks')
-for i in tup:
-    print(i)
+# tup = ('geeks', 'for', 'geeks')
+# for i in tup:
+#     print(i)
 
 
-s = 'geek'
-for i in s:
-    print(i)
+# s = 'geek'
+# for i in s:
+#     print(i)
 
-d = dict({'x': 123, 'y': 345})
+# d = dict({'x': 123, 'y': 345})
 
-for i in d:
-    print('%s   %d' % (i, d[i]))
+# for i in d:
+#     print('%s   %d' % (i, d[i]))
 
 
-set1 = {1, 2, 3, 4, 5, 6}
+# set1 = {1, 2, 3, 4, 5, 6}
 
-for i in set1:
-    print(i)
+# for i in set1:
+#     print(i)
 
-lists = ['geek', 'for', 'geek']
+# lists = ['geek', 'for', 'geek']
 
-for index in range(len(lists)):
-    print(lists[index])
+# for index in range(len(lists)):
+#     print(lists[index])
 
 
 
-for i in range(1, 5):
-    for j in range(i):
-        print(i, end=' ')
-    print()
+# for i in range(1, 5):
+#     for j in range(i):
+#         print(i, end=' ')
+#     print()
 
 
-# Continue statement
+# # Continue statement
 
-for letter in 'geeksforgeeks':
-    if letter == 'e' or letter == 's':
-        continue
-    print('Current letter:', letter)
+# for letter in 'geeksforgeeks':
+#     if letter == 'e' or letter == 's':
+#         continue
+#     print('Current letter:', letter)
 
-for letter in 'geeksforgeeks':
-    if letter == 'e' or letter == 's':
-        break
-print('Current letter :', letter)
+# for letter in 'geeksforgeeks':
+#     if letter == 'e' or letter == 's':
+#         break
+# print('Current letter :', letter)
 
 
-for letter in 'geeksforgeeks':
-    pass
-print('Last Letter :', letter)
+# for letter in 'geeksforgeeks':
+#     pass
+# print('Last Letter :', letter)
 
 
-n = 5
+# n = 5
 
-while n > 0:
-    n -= 1
-    print(n)
+# while n > 0:
+#     n -= 1
+#     print(n)
 
 
-# type conversion
+# # type conversion
 
-# implicit type conversion
-integer_number = 123
-float_number = 1.23
+# # implicit type conversion
+# integer_number = 123
+# float_number = 1.23
 
-new_number = integer_number + float_number
+# new_number = integer_number + float_number
 
-print('Value:', new_number)
-print('Data type:', type(new_number))
+# print('Value:', new_number)
+# print('Data type:', type(new_number))
 
-# explicit type conversion
+# # explicit type conversion
 
-num_string = '12'
-num_integer = 23
+# num_string = '12'
+# num_integer = 23
 
-print('Data type of num_string before Type casting:', type(num_string))
+# print('Data type of num_string before Type casting:', type(num_string))
 
-# explicit conversion
+# # explicit conversion
 
-num_string = int(num_string)
+# num_string = int(num_string)
 
-print('Data type of num_string after type casting:', type(num_string))
+# print('Data type of num_string after type casting:', type(num_string))
 
-NUM_SUM = num_integer + num_string
+# NUM_SUM = num_integer + num_string
 
-print('Sum:', NUM_SUM)
-print('Data type of NUM_SUM:', type(NUM_SUM))
+# print('Sum:', NUM_SUM)
+# print('Data type of NUM_SUM:', type(NUM_SUM))
 
 
 
-# Error handling
-# view all built-in exceptions
-print(dir(locals()['__builtins__']))
+# # Error handling
+# # view all built-in exceptions
+# print(dir(locals()['__builtins__']))
 
 
-# exception handling
-
-try:
-    numerator = 10
-    denominator = 0
-
-    result = numerator / denominator
-    print(result)
-
-except:
-    print('Error: Denominator cannot be 0.')
-
-
-try:
-
-    even_number = [2, 4, 6, 8]
-    print(even_number[5])
-except ZeroDivisionError:
-    print('Denominator cannot be 0.')
-except IndexError:
-    print('Index out of range.')
-
-# try with else clause
+# # exception handling
 
 # try:
-#     num = int(input('Enter a number: '))
-#     assert num % 2 == 0
-# except: 
-#     print('Not an even number!')
-# else:
-#     reciprocal = 1 / num
-#     print('Reciprocal:', reciprocal)
+#     numerator = 10
+#     denominator = 0
+
+#     result = numerator / denominator
+#     print(result)
+
+# except:
+#     print('Error: Denominator cannot be 0.')
 
 
-# try with finally clause
+# try:
 
-try:
-    numerator = 10
-    denominator = 0
+#     even_number = [2, 4, 6, 8]
+#     print(even_number[5])
+# except ZeroDivisionError:
+#     print('Denominator cannot be 0.')
+# except IndexError:
+#     print('Index out of range.')
 
-    result = numerator / denominator
-    print(result)
-except:
-    print('Error: Denominator cannot be 0.')
-finally:
-    print('This is finally block.')
+# # try with else clause
 
-
-
-# Functions
-
-def greet(name):
-    print('Hello', name)
-    print(f'Hello {name} Kolapo')
-
-greet('Wariz')
-
-def abs (num):
-    # return num if num > 0 else -num
-
-    if num > 0:
-        return num
-    else:
-        return -num
-
-print(abs(10))
-print(abs(-10))
+# # try:
+# #     num = int(input('Enter a number: '))
+# #     assert num % 2 == 0
+# # except: 
+# #     print('Not an even number!')
+# # else:
+# #     reciprocal = 1 / num
+# #     print('Reciprocal:', reciprocal)
 
 
-# Arbitrary arguments
+# # try with finally clause
 
-def my_function(*kids):
-    print('The youngest child is ' + kids[1])
+# try:
+#     numerator = 10
+#     denominator = 0
 
-my_function('Emil', 'Tobias', 'Linus')
-
-
-# Keyword arguments
-
-def keyword_function(child3, child2, child1):
-    print('The youngest child is '  + child3)
-    print('The youngest child is '  + child2)
-    print('The youngest child is '  + child1)
+#     result = numerator / denominator
+#     print(result)
+# except:
+#     print('Error: Denominator cannot be 0.')
+# finally:
+#     print('This is finally block.')
 
 
-keyword_function(child1='Wariz', child2='Samad', child3='Kolapo')
 
-# Arbitrary keyword arguments
+# # Functions
 
-def arbitrary_keyword_function(**kid):
-    print('His last name is ' + kid['lname'])
+# def greet(name):
+#     print('Hello', name)
+#     print(f'Hello {name} Kolapo')
 
-arbitrary_keyword_function(fname = 'James', lname = 'Bond')
+# greet('Wariz')
 
+# def abs (num):
+#     # return num if num > 0 else -num
 
-# Default parameter value
+#     if num > 0:
+#         return num
+#     else:
+#         return -num
 
-def default_function(country = 'Norway'):
-    print('I am from ' + country)
-
-default_function('Sweden')
-default_function('Senegal')
-default_function()
-default_function('Nigeria')
-
-
-# Passing a list as an argument
-
-def list_function(food):
-    for x in food:
-        print(x)
-
-fruits = ['apple', 'banana', 'cherry']
-
-list_function(fruits)
+# print(abs(10))
+# print(abs(-10))
 
 
-# Return values
+# # Arbitrary arguments
 
-def return_function(x):
-    return 5 * x
+# def my_function(*kids):
+#     print('The youngest child is ' + kids[1])
 
-
-print(return_function(5))
-
-# The pass statement
-
-def pass_function():
-    pass
-
-print(pass_function())
+# my_function('Emil', 'Tobias', 'Linus')
 
 
-# Positional-only Arguments
+# # Keyword arguments
 
-def positional_function(x, /):
-    print(x)
-
-positional_function(3)
-
-def positional_function2(x):
-    print(x)
-
-positional_function2(x = 3)
+# def keyword_function(child3, child2, child1):
+#     print('The youngest child is '  + child3)
+#     print('The youngest child is '  + child2)
+#     print('The youngest child is '  + child1)
 
 
-# def positional_function3(x, /):
+# keyword_function(child1='Wariz', child2='Samad', child3='Kolapo')
+
+# # Arbitrary keyword arguments
+
+# def arbitrary_keyword_function(**kid):
+#     print('His last name is ' + kid['lname'])
+
+# arbitrary_keyword_function(fname = 'James', lname = 'Bond')
+
+
+# # Default parameter value
+
+# def default_function(country = 'Norway'):
+#     print('I am from ' + country)
+
+# default_function('Sweden')
+# default_function('Senegal')
+# default_function()
+# default_function('Nigeria')
+
+
+# # Passing a list as an argument
+
+# def list_function(food):
+#     for x in food:
+#         print(x)
+
+# fruits = ['apple', 'banana', 'cherry']
+
+# list_function(fruits)
+
+
+# # Return values
+
+# def return_function(x):
+#     return 5 * x
+
+
+# print(return_function(5))
+
+# # The pass statement
+
+# def pass_function():
+#     pass
+
+# print(pass_function())
+
+
+# # Positional-only Arguments
+
+# def positional_function(x, /):
 #     print(x)
 
-# positional_function3(x = 3)
+# positional_function(3)
 
-# Keyword only Arguments
+# def positional_function2(x):
+#     print(x)
 
-def keyword_only_function(*, x):
-    print(x)
-
-keyword_only_function(x = 7)
+# positional_function2(x = 3)
 
 
-def positional_and_keyword_function(a, b, /, *, c, d):
-    print(a + b + c + d)
+# # def positional_function3(x, /):
+# #     print(x)
 
-positional_and_keyword_function(5, 6, c = 7, d = 8)
+# # positional_function3(x = 3)
 
+# # Keyword only Arguments
 
-# Recursion
+# def keyword_only_function(*, x):
+#     print(x)
 
-def tri_recursion(k):
-    if(k > 0):
-        result = k + tri_recursion(k - 1)
-        print(result)
-    else:
-        result = 0
-
-    return result
-
-print('Recursion Example Results:')
-tri_recursion(5)
+# keyword_only_function(x = 7)
 
 
-# Lists
+# def positional_and_keyword_function(a, b, /, *, c, d):
+#     print(a + b + c + d)
 
-x_list = [1, 3, 3, 7]
-print(type(x_list))
-print(x_list)
-x_tuple = (1, 3, 3, 7)
-print(type(x_tuple))
-print(x_tuple)
-x_set = {1, 3, 3, 7}
-print(type(x_set))
-print(x_set)
+# positional_and_keyword_function(5, 6, c = 7, d = 8)
 
 
-color = ['blue', 'green', 'red', 'yellow']
-fruit = ['blueberry', 'apple', 'cherry', 'banana']
+# # Recursion
+
+# def tri_recursion(k):
+#     if(k > 0):
+#         result = k + tri_recursion(k - 1)
+#         print(result)
+#     else:
+#         result = 0
+
+#     return result
+
+# print('Recursion Example Results:')
+# tri_recursion(5)
 
 
-# df = pd.DataFrame(columns=['color', 'fruit'])
+# # Lists
 
-# df['color'], df['fruit']= color, fruit
+# x_list = [1, 3, 3, 7]
+# print(type(x_list))
+# print(x_list)
+# x_tuple = (1, 3, 3, 7)
+# print(type(x_tuple))
+# print(x_tuple)
+# x_set = {1, 3, 3, 7}
+# print(type(x_set))
+# print(x_set)
 
-# print(df)
+
+# color = ['blue', 'green', 'red', 'yellow']
+# fruit = ['blueberry', 'apple', 'cherry', 'banana']
 
 
-# Tuples
+# # df = pd.DataFrame(columns=['color', 'fruit'])
 
-t = 12345, 54321, 'hello'
-print(t[0])
-print(t)
+# # df['color'], df['fruit']= color, fruit
 
-u = t, (1, 2, 3, 4, 5)
-print(u)
+# # print(df)
 
-# t[0] = 8888
+
+# # Tuples
+
+# t = 12345, 54321, 'hello'
+# print(t[0])
 # print(t)
 
-p, q, r = t
-print(p)
-print(q)
-print(r)
+# u = t, (1, 2, 3, 4, 5)
+# print(u)
 
+# # t[0] = 8888
+# # print(t)
 
-first, *second = t
-print(first)
-print(second)
+# p, q, r = t
+# print(p)
+# print(q)
+# print(r)
 
 
-# Sets
+# first, *second = t
+# print(first)
+# print(second)
 
-A = {1, 2, 3, 4, 5}
-B = {4, 5, 6, 7, 8}
 
+# # Sets
 
-# Set Union
-print(A.union(B))
-print(A | B)
+# A = {1, 2, 3, 4, 5}
+# B = {4, 5, 6, 7, 8}
 
 
-# Set intersection
-print(A.intersection(B))
-print(A & B)
+# # Set Union
+# print(A.union(B))
+# print(A | B)
 
-# Set difference
-print(B.difference(A))
-print (B - A)
 
-# Set symemetric difference
-print(A.symmetric_difference(B))
+# # Set intersection
+# print(A.intersection(B))
+# print(A & B)
 
+# # Set difference
+# print(B.difference(A))
+# print (B - A)
 
-this_set = {'apple', 'banana', True, False, 1, 0}
-print(this_set)
+# # Set symemetric difference
+# print(A.symmetric_difference(B))
 
 
-print(len(this_set))
-print(type(this_set))
+# this_set = {'apple', 'banana', True, False, 1, 0}
+# print(this_set)
 
 
-set_constructor = set(('apple', 'cherry', 1, True, False, 0, 32))
-print(set_constructor)
+# print(len(this_set))
+# print(type(this_set))
 
 
-# Dictionary
+# set_constructor = set(('apple', 'cherry', 1, True, False, 0, 32))
+# print(set_constructor)
 
-tel = {'jack': 4098, 'sape': 4139}
-tel['guido'] = 4127
-print(tel)
-print(tel['jack'])
-del tel['sape']
-print(tel)
-tel['irv'] = 4127
-print(tel)
-print(sorted(tel))
-print(list(tel))
 
-print('guido' in tel)
+# # Dictionary
 
-print('jack' not in tel)
+# tel = {'jack': 4098, 'sape': 4139}
+# tel['guido'] = 4127
+# print(tel)
+# print(tel['jack'])
+# del tel['sape']
+# print(tel)
+# tel['irv'] = 4127
+# print(tel)
+# print(sorted(tel))
+# print(list(tel))
 
-dicts = dict([('sape', 4), ('wariz', 'samad')])
-print(dicts)
+# print('guido' in tel)
 
-print({x: x**2 for x in (2, 4, 6)})
+# print('jack' not in tel)
 
+# dicts = dict([('sape', 4), ('wariz', 'samad')])
+# print(dicts)
 
-# Looping dict
+# print({x: x**2 for x in (2, 4, 6)})
 
-knights = {'gallahad': 'the pure', 'robin': 'the brave'}
 
-for k, v in knights.items():
-    print(k + '----------------- ' + v)
+# # Looping dict
 
-for i, j in enumerate(['tic', 'tac', 'toe']):
-    print(i, j)
+# knights = {'gallahad': 'the pure', 'robin': 'the brave'}
 
-for k, l in enumerate(knights):
-    print(k, l)
+# for k, v in knights.items():
+#     print(k + '----------------- ' + v)
 
-questions = ['name', 'quest', 'favorite color']
-answers = ['lancelot', 'the holy grail', 'blue']
+# for i, j in enumerate(['tic', 'tac', 'toe']):
+#     print(i, j)
 
-for q, a in zip(questions, answers):
-    print(q, a)
-    print('What is your {0}? It is {1}.'.format(q, a))
+# for k, l in enumerate(knights):
+#     print(k, l)
 
-for i in reversed(range(1, 10, 2)):
-    print(i)
+# questions = ['name', 'quest', 'favorite color']
+# answers = ['lancelot', 'the holy grail', 'blue']
 
-basket = ['apple', 'orange', 'apple', 'pear', 'orange', 'banana']
+# for q, a in zip(questions, answers):
+#     print(q, a)
+#     print('What is your {0}? It is {1}.'.format(q, a))
 
-for i in sorted(basket):
-    print(i)
+# for i in reversed(range(1, 10, 2)):
+#     print(i)
 
-for j in sorted(set(basket)):
-    print(j)
+# basket = ['apple', 'orange', 'apple', 'pear', 'orange', 'banana']
 
+# for i in sorted(basket):
+#     print(i)
 
-import math
+# for j in sorted(set(basket)):
+#     print(j)
 
-raw_data = [56.2, float('NaN'), 51.7, 55.3, 52.5,float('NaN'), 47.8]
-filtered_data = []
-for value in raw_data:
-    if not math.isnan(value):
-        print(value)
-        filtered_data.append(value)
 
+# import math
 
-print(filtered_data)
+# raw_data = [56.2, float('NaN'), 51.7, 55.3, 52.5,float('NaN'), 47.8]
+# filtered_data = []
+# for value in raw_data:
+#     if not math.isnan(value):
+#         print(value)
+#         filtered_data.append(value)
 
 
-# Modules
+# print(filtered_data)
 
-result1 = fibo.add(10, 5)
-print('result from fibo add function = ', result1)
 
-# Renaming a module
-result2 = fb.sub(10, 5)
-print('result from fb sub function = ', result2)
+# # Modules
 
+# result1 = fibo.add(10, 5)
+# print('result from fibo add function = ', result1)
 
-x = platform.system()
-print(x)
+# # Renaming a module
+# result2 = fb.sub(10, 5)
+# print('result from fb sub function = ', result2)
 
-y = platform.python_version()
-print(y)
 
-z = dir(platform)
-print(z)
+# x = platform.system()
+# print(x)
 
+# y = platform.python_version()
+# print(y)
 
-# Import from module
+# z = dir(platform)
+# print(z)
 
-print(greeting('Wariz'))
-print(person1)
-print(person1['age'])
 
+# # Import from module
 
-# Lambda function
+# print(greeting('Wariz'))
+# print(person1)
+# print(person1['age'])
 
-lam_A = lambda a : a + 10
-print(f'Lambda function = {lam_A(5)}')
 
-lam_B =lambda a, b: a * b
-print(f'Lambda function 2 = {lam_B(5, 2)}')
+# # Lambda function
 
-# Power of lambda
+# lam_A = lambda a : a + 10
+# print(f'Lambda function = {lam_A(5)}')
 
-def lam_C (n):
-    return lambda a : a * n
+# lam_B =lambda a, b: a * b
+# print(f'Lambda function 2 = {lam_B(5, 2)}')
 
-mydoubler = lam_C(5)
-print(mydoubler(4))
+# # Power of lambda
 
+# def lam_C (n):
+#     return lambda a : a * n
 
-def lam_C ():
-    return lambda a: a + 4
+# mydoubler = lam_C(5)
+# print(mydoubler(4))
 
-double = lam_C()
-print(double(3))
 
-print((lambda x: x * 2)(2))
+# def lam_C ():
+#     return lambda a: a + 4
 
-fullname = lambda first, second: f'Full name: {first.upper()} {second}'
-print(fullname('wariz', 'kolapo'))
+# double = lam_C()
+# print(double(3))
 
+# print((lambda x: x * 2)(2))
 
-def my_map(my_func, my_iter):
-    result = []
-    for item in my_iter:
-        new_item = my_func(item)
-        result.append(new_item)
-    return result
+# fullname = lambda first, second: f'Full name: {first.upper()} {second}'
+# print(fullname('wariz', 'kolapo'))
 
-nums = [3, 4, 5, 6, 7]
 
-cubed = my_map(lambda x: x**3, nums)
-print(cubed)
+# def my_map(my_func, my_iter):
+#     result = []
+#     for item in my_iter:
+#         new_item = my_func(item)
+#         result.append(new_item)
+#     return result
+
+# nums = [3, 4, 5, 6, 7]
+
+# cubed = my_map(lambda x: x**3, nums)
+# print(cubed)
+
+# # Decorators
+# # function decorators
+
+# import functools
+
+# def start_end_decorator(func):
+
+#     @functools.wraps(func)
+#     def wrapper(*args, **kwargs):
+#         print('Start')
+#         result = func(*args, **kwargs)
+#         print('End')
+#         return result
+#     return wrapper
+
+# @start_end_decorator
+# def add5(x):
+#     return x + 5
+
+# result = add5(10)
+# print(result)
+# print(help(add5))
+# print(add5.__name__)
+
+
+# def repeat(num_times):
+
+#     def decorator_repeat(func):
+#         @functools.wraps(func)
+
+#         def wrapper(*args, **kwargs):
+#             for _ in range(num_times):
+#                 result = func(*args, **kwargs)
+#             return result
+#         return wrapper
+#     return decorator_repeat
+
+# @repeat(num_times=4)
+# def greet(name):
+#     print(f'Hello {name}')
+
+# greet('Wariz')
+# greet('Kolapo')
+
+# def start_new_end_decorator(func):
+
+#     @functools.wraps(func)
+#     def wrapper(*args, **kwargs):
+#         print('Start of function')
+#         result = func(*args, **kwargs)
+#         print('End of function')
+#         return result
+#     return wrapper
+
+
+# def debug(func):
+#     @functools.wraps(func)
+
+#     def wrapper(*args, **kwargs):
+#         args_repr = [repr(a) for a in args]
+#         kwargs_repr = [f"{k}={v!r}" for k, v in kwargs.items()]
+#         signature = ", ".join(args_repr + kwargs_repr)
+#         print(f"Calling {func.__name__}({signature})")
+#         result = func(*args, **kwargs)
+#         print(f'{func.__name__} returned {result!r}')
+#         return result
+#     return wrapper
+
+
+# @debug
+# @start_new_end_decorator
+# def say_hello(name):
+#     greeting = f'Hello {name}'
+#     print(greeting)
+#     return greeting
+
+# say_hello('Idan mi')
+
+# # Class decorators
+
+# class CountCalls:
+#     def __init__(self, func):
+#         self.func = func
+#         self.num_calls = 0
+
+#     def __call__(self, *args, **kwds):
+#         self.num_calls += 1
+#         print(f'This is executed {self.num_calls} times')
+#         return self.func(*args, **kwds)
+
+# @CountCalls
+
+# def say_hello2():
+#     print('Hello!')
+
+# say_hello2()
+# say_hello2()
+
+# # Function decorator time
+
+# import time
+
+# def tictoc (func):
+
+#     def wrapper():
+#         start = time.time()
+#         func()
+#         end = time.time() - start
+#         print(f'{func.__name__} ran in {end} seconds')
+#     return wrapper
+
+# @tictoc
+
+# def do_this():
+#     time.sleep(1.3)
+
+# @tictoc
+
+# def do_that():
+#     time.sleep(2.5)
+
+# do_this()
+# do_that()
+# print('Done!')
+
+# Iterators
+
+mytuple = ('apple', 'banana', 'cherry')
+myit = iter(mytuple)
+
+print(next(myit))
+print(next(myit))
+print(next(myit))
+
+mystr = 'banana'
+myit2 = iter(mystr)
+
+print(next(myit2))
+print(next(myit2))
+print(next(myit2))
+print(next(myit2))
+print(next(myit2))
+print(next(myit2))
+
+for x in mytuple:
+    print(x)
+
+for x in mystr:
+    print(x)
+
+
+# Class Iterator
+
+class MyNumbers:
+    def __iter__(self):
+        self.a = 1
+        return self
+    
+    def __next__(self):
+        x = self.a
+        self.a += 1
+        return x
+    
+myclass = MyNumbers()
+myiter = iter(myclass)
+
+print(next(myiter))
+print(next(myiter))
+print(next(myiter))
+print(next(myiter))
+print(next(myiter))
+print(next(myiter))
+
+
+# Class Iterator with stopiteration
+
+class MyNumbers2():
+    def __iter__(self):
+        self.a = 1
+        return self
+    
+    def __next__(self):
+        if self.a <= 20:
+            x = self.a
+            self.a += 1
+            return x
+        else:
+            raise StopIteration
+        
+
+myclass2 = MyNumbers2()
+myiter2 = iter(myclass2)
+
+for x in myiter2:
+    print(x)
