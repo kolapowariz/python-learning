@@ -927,3 +927,136 @@ xk = re.search(r"\bS\w+", txt)
 print(xk.span())
 print(xk.string)
 print(xk.group())
+
+
+
+# Object Oriented Programming OOP
+
+class Dog:
+    species = 'Canis familiaris'
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def __str__ (self):
+        return f"{self.name} is {self.age} years old"
+
+    def speak (self, sound):
+        return f"{self.name} says {sound}"
+    
+
+miles = Dog('Miles', 4)
+print(miles.name)
+print(miles.age)
+print(miles.species)
+miles.species = 'Felis silvestris'
+print(miles.species)
+print(miles.__str__())
+print(miles.speak('Woof woof'))
+print(miles)
+
+
+# Exercise
+
+class Car:
+    def __init__(self, color, mileage):
+        self.color = color
+        self.mileage = mileage
+    
+    def __str__ (self):
+        return f"The {self.color} car has {self.mileage} miles."
+    
+        
+blue = Car('blue', 20000)
+red = Car('red', 30000)
+
+print(blue)
+print(red)
+
+for car in (blue, red):
+    print(car)
+
+class DogNew:
+    species = "Canis familiaris"
+
+    def __init__(self, name, age, breed):
+        self.name = name
+        self.age = age
+        self.breed = breed
+
+    def __str__(self):
+        return f"{self.name} is {self.age} years old"
+
+    def speak(self, sound):
+        return f"{self.name} says {sound}"
+
+
+jack = DogNew("Jack", 3, "Bulldog")
+jim = DogNew("Jim", 5, "Bulldog")
+
+print(jack.speak("Woof"))
+print(jim.speak("Woof"))
+
+class NewDog2:
+    species = "Canis familiaris"
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def __str__(self):
+        return f"{self.name} is {self.age} years old"
+
+    def speak(self, sound):
+        return f"{self.name} barks: {sound}"
+
+
+class JackRussellTerrier(NewDog2):
+    def speak(self, sound='Arf'):
+        return f"{self.name} says {sound}"
+
+class Dachshund(NewDog2):
+    def speak(self, sound='Arfff'):
+        return super().speak(sound)
+
+class Bulldog(NewDog2):
+    pass
+
+miless = JackRussellTerrier("Miless", 4)
+buddys = Dachshund("Buddy", 9)
+jacks = Bulldog("Jack", 3)
+jims = Bulldog("Jim", 5)
+
+print(miless.species)
+print(type(miless))
+print(isinstance(miless, NewDog2))
+print(isinstance(miless, Bulldog))
+print(isinstance(jack, Dachshund))
+
+print(miless.speak())
+print(miless.speak('Grrr'))
+print(jims.speak('Woof'))
+
+print(buddys.speak())
+
+class TheDog:
+    species = 'Canis familiaris'
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def __str__(self):
+        return f"{self.name} is {self.age} years old"
+    
+    def speak(self, sound):
+        return f'{self.name} says {sound}'
+
+
+class GoldenRetriever(TheDog):
+    def speak(self, sound='Bark'):
+        return super().speak(sound)
+
+warizDog = GoldenRetriever('Jacker', 10)
+print(warizDog.speak())
