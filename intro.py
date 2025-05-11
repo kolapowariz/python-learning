@@ -1060,3 +1060,166 @@ class GoldenRetriever(TheDog):
 
 warizDog = GoldenRetriever('Jacker', 10)
 print(warizDog.speak())
+
+
+
+# Dates
+
+import datetime
+
+dateX = datetime.datetime.now()
+print(dateX)
+print(dateX.year)
+print(dateX.strftime('%A'))
+print(f"Strftime output: {dateX.strftime('%B')}")
+print(dateX.strftime('%c'))
+
+dateY = datetime.datetime(2020, 5, 17)
+print(dateY)
+
+dateZ = datetime.datetime(2018, 6, 1)
+print(dateZ.strftime('%w'))
+
+# Math
+
+import math
+
+mathX = math.sqrt(64)
+print(mathX)
+
+mathY = math.ceil(1.4)
+print(mathY)
+
+mathZ = math.floor(1.4)
+print(mathZ)
+
+mathPi = math.pi
+print(mathPi)
+
+
+# JSON
+
+import json
+
+# convert from json to python. Result is a python dictionary
+jsonX = '{"name": "John", "age": 30, "city": "New York"}'
+jsonY = json.loads(jsonX)
+print(jsonY)
+print(jsonY['city'])
+
+# convert from python to json. Result is a json string
+
+jsonZ = {
+    'name': 'John',
+    'age': 30,
+    'city': 'New York'
+}
+
+jsonA = json.dumps(jsonZ)
+print(jsonA)
+
+# convert python object into JSON strings
+
+print(json.dumps({'name': 'John', 'age': 30}))
+print(json.dumps(['apple', 'banana']))
+print(json.dumps(('apple', 'banana')))
+print(json.dumps('Hello'))
+print(json.dumps(42))
+print(json.dumps(31.76))
+print(json.dumps(True))
+print(json.dumps(False))
+print(json.dumps(None))
+
+
+jsonB = {
+    'name': 'John',
+    'age': 30,
+    'married': True,
+    'divorced': False,
+    'children': ('Ann', 'Billy'),
+    'pets': None,
+    'cars': [
+        {'model': 'BMW 230', 'mpg': 27.5},
+        {'model': 'Ford Edge', 'mpg': 24.1}
+    ]
+}
+
+print(json.dumps(jsonB))
+
+# Formatting json result
+
+print(json.dumps(jsonB, indent=4))
+print(json.dumps(jsonB, indent=4, separators=('. ',' = ')))
+print(json.dumps(jsonB, indent=4, sort_keys=True))
+
+# PIP
+
+import camelcase
+
+camelcaseA = camelcase.CamelCase()
+
+txt = 'hello world'
+print(camelcaseA.hump(txt))
+print(camelcaseA.stop_words)
+
+
+# String formatting
+
+formatA = 59
+formatTxt = f'The price is {formatA:.2f} dollars'
+print(formatTxt)
+
+formatB = f'The price is {95:.2f} dollars'
+print(formatB)
+
+# Perform if...else statement
+
+formatPrice = 492
+
+formatC = f'It is very {'Expensive' if formatPrice > 50 else 'cheap'}'
+print(formatC)
+
+formatFruit = 'apples'
+formatD = f'I love {formatFruit.upper()}'
+print(formatD)
+
+formatPrice2 = 59000
+
+print(f'the price is {formatPrice2:_} dollars')
+
+# User Input
+
+print('Enter your name:')
+inputName = input()
+print(f'Hello {inputName}')
+
+inputName2 = input('Enter your name: ')
+print(f'Hello {inputName2}')
+
+inputName3 = input("Enter your inputName3:")
+print(f"Hello {inputName3}")
+fav1 = input("What is your favorite animal:")
+fav2 = input("What is your favorite color:")
+fav3 = input("What is your favorite number:")
+print(f"Do you want a {fav2} {fav1} with {fav3} legs?")
+
+
+# input number
+import math
+
+inputNumber = input('Enter a number: ')
+
+inputY = math.sqrt(float(inputNumber))
+print(f'The square root of {inputNumber} is {inputY}')
+
+formatY = True
+
+while formatY == True:
+    x = input('Enter a number:')
+    try:
+        x = float(x)
+        formatY = False
+    except:
+        print('Wrong input, please try again')
+
+print('Thank you')
