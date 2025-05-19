@@ -1154,13 +1154,13 @@ print(json.dumps(jsonB, indent=4, sort_keys=True))
 
 # PIP
 
-import camelcase
+# import camelcase
 
-camelcaseA = camelcase.CamelCase()
+# camelcaseA = camelcase.CamelCase()
 
-txt = 'hello world'
-print(camelcaseA.hump(txt))
-print(camelcaseA.stop_words)
+# txt = 'hello world'
+# print(camelcaseA.hump(txt))
+# print(camelcaseA.stop_words)
 
 
 # String formatting

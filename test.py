@@ -1,5 +1,5 @@
-import cowsay
+# import cowsay
 
-cowsay.cow("Good Mooooorning")
-cowsay.tux("Good Mooooorning")
-cowsay.dragon("Good Mooooorning")
+# cowsay.cow("Good Mooooorning")
+# cowsay.tux("Good Mooooorning")
+# cowsay.dragon("Good Mooooorning")
