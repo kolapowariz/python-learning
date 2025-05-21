@@ -54,3 +54,156 @@ print('Last element from 2nd dim: ', c[1, -1])
 
 aSlice = np.array([1, 2, 3, 4, 5, 6, 7])
 print(aSlice[1:5])
+
+# Array Slicing Steps
+
+print(aSlice[1:5:2])
+print(aSlice[::2])
+
+bSlice = np.array([[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]])
+print(bSlice[1, 1:4])
+print(bSlice[0:2, 2])
+print(bSlice[0:2, 1:4])
+
+# Data Types in NumPy
+
+# Checking the data type of an array
+
+dataType = np.array([1, 3, 5, 7, 9])
+print(dataType.dtype)
+
+dataType2 = np.array(['apple', 'banana', 'cherry'])
+print(dataType2.dtype)
+
+# Creating arrays with defined data type
+
+dataType3 = np.array([1,2,3,4,5], dtype='S')
+print(dataType3)
+print(dataType3.dtype)
+
+# dataType4 = np.array(['a', '2', '3'], dtype='i')
+# print(dataType4)
+# print(dataType4.dtype)
+
+# Converting data type on existing arrays
+dataType5 = np.array([1.1, 2.1, 3.1])
+
+newarr = dataType5.astype('i')
+print(newarr)
+print(newarr.dtype)
+
+# or using 'int' as parameter value
+
+newarr2 = dataType5.astype(int)
+
+print(newarr2)
+print(newarr2.dtype)
+
+# Change data types from integer to boolean
+
+dataType6 = np.array([1, 0, 3])
+
+newarr3 = dataType6.astype(bool)
+
+print(newarr3)
+print(newarr3.dtype)
+
+# NumPy Array copy vs view
+
+# Copy
+
+aCopy = np.array([1, 2, 3, 4, 5, 6])
+x = aCopy.copy()
+aCopy[0] = 42
+
+print(aCopy)
+print(x)
+
+# View
+
+bCopy = np.array([1, 2, 3, 4, 5, 6, 7])
+y = bCopy.view()
+bCopy[0] = 42
+
+print(bCopy)
+print(y)
+
+# Make changes in the view
+
+y[0] = 31
+
+print(bCopy)
+print(y)
+
+# Check if array owns its data
+print(x.base)
+print(y.base)
+
+# NumPy Array shape
+
+arrShape = np.array([[1, 2, 3, 7, 8], [4, 5, 6, 9, 10]])
+
+print(arrShape.shape)
+
+arrShape2 = np.array([1, 2, 3, 4], ndmin=5)
+
+print(arrShape2)
+print('Shape of array :', arrShape2.shape)
+
+# NumPy Joining Arrays
+
+arrJoin = np.array([1, 2, 3])
+arrJoin2 = np.array([4, 5, 6])
+
+arrJoin3 = np.concatenate((arrJoin, arrJoin2))
+print(arrJoin3)
+
+# Join 2D array along rows (axis=1)
+
+arrJoin4 = np.array([[1, 2], [3, 4]])
+
+arrJoin5 = np.array([[5, 6], [7, 8]])
+
+arrJoin6 = np.concatenate((arrJoin4, arrJoin5), axis=1)
+print(arrJoin6)
+
+# Joining Arrays using the stack functions
+
+arrJoin7 = np.stack((arrJoin, arrJoin2), axis=1)
+print(arrJoin7)
+
+# Stacking along rows
+
+arrJoin8 = np.hstack((arrJoin, arrJoin2))
+print(arrJoin8)
+
+# Stacking along columns
+
+arrJoin9 = np.vstack((arrJoin, arrJoin2))
+print(arrJoin9)
+
+# Stacking along height (depth)
+
+arrJoin10 = np.dstack((arrJoin, arrJoin2))
+print(arrJoin10)
+
+# NumPy splitting array
+
+arrSplit = np.array([1, 2, 3, 4, 5, 6])
+
+arrSplit1 = np.array_split(arrSplit, 3)
+print(arrSplit1)
+print(arrSplit1[0])
+print(arrSplit1[1])
+print(arrSplit1[2])
+
+arrSplit2 = np.array([[1, 2], [3, 4], [5, 6], [7, 8], [9, 10], [11, 12]])
+
+arrSplit3 = np.array_split(arrSplit2, 3)
+print(arrSplit3)
+
+arrSplit4 = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12], [13, 14, 15], [16, 17, 18]])
+
+arrSp = np.hsplit(arrSplit4, 3)
+
+print(arrSp)
