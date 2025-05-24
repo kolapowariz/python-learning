@@ -207,3 +207,64 @@ arrSplit4 = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12], [13, 14, 15
 arrSp = np.hsplit(arrSplit4, 3)
 
 print(arrSp)
+
+
+# NumPy Searching Arrays
+
+arrSearch = np.array([1, 2, 3, 4, 5, 4, 4])
+
+xSearch = np.where(arrSearch == 4)
+print(xSearch)
+
+ySearch = np.where(arrSearch % 2 == 0)
+print(ySearch)
+
+ySearch = np.where(arrSearch % 2 == 1)
+print(ySearch)
+
+# NumPy Sorting Arrays
+
+arrSort = np.array([3, 2, 0, 1])
+print(np.sort(arrSort))
+
+arrSort2 = np.array(['banana', 'cherry', 'apple'])
+print(np.sort(arrSort2))
+
+arrSort3 = np.array([True, False, True])
+print(np.sort(arrSort3))
+
+# Sorting a 2D array
+
+arrSort4 = np.array([[3, 2, 4], [5, 0, 1]])
+print(np.sort(arrSort4))
+
+# NumPy Filter Array
+
+arrFilter = np.array([41, 42, 43, 44])
+xFilter = [True, False, True, False]
+
+newarrFilter = arrFilter[xFilter]
+print(newarrFilter)
+
+filter_arr = []
+
+for element in arrFilter:
+    if element > 42:
+        filter_arr.append(True)
+    else:
+        filter_arr.append(False)
+    
+newarrFilter2 = arrFilter[filter_arr]
+print(filter_arr)
+print(newarrFilter2)
+
+# Creating Filter Directly from Array
+
+filter_arr2 = arrFilter > 42
+
+newarrFilter3 = arrFilter[filter_arr2]
+
+print(filter_arr2)
+print(newarrFilter3)
+
+# Random Numbers in NumPy
