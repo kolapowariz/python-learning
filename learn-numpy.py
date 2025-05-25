@@ -268,3 +268,59 @@ print(filter_arr2)
 print(newarrFilter3)
 
 # Random Numbers in NumPy
+
+# Generate random number
+
+from numpy import random
+
+xRandom = random.randint(100)
+print(xRandom)
+
+# Generate random float
+
+yRandom = random.rand()
+print(yRandom)
+
+# Generate random array
+
+zRandom = random.randint(100, size=5)
+print(zRandom)
+
+aRandom = random.randint(100, size=(3, 5))
+print(aRandom)
+
+
+bRandom = random.rand(5)
+print(bRandom)
+
+cRandom = random.rand(3, 5)
+print(cRandom)
+
+# Generate random number from array
+
+dRandom = random.choice([3, 5, 7, 9])
+print(dRandom)
+
+eRandom = random.choice([3, 5, 7, 9], size=(3, 5))
+print(eRandom)
+
+
+# Seaborn
+
+# Plotting a displot
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+sns.displot([0, 1, 2, 3, 4, 5])
+
+plt.show()
+
+# Plotting a displot without the histogram
+
+sns.displot([0, 1, 2, 3, 4, 5, 6], kind='kde')
+
+# Visualization of Normal distribution
+
+sns.displot(random.normal(size=1000), kind="kde")
+
+plt.show()
