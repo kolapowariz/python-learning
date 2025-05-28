@@ -152,3 +152,68 @@ print(aLoad.tail())
 # Prints information about the DataFrame
 
 print(aLoad.info())
+
+
+# Pandas - Cleaning Empty Cells
+
+df = pd.read_csv('newdata.csv')
+
+new_df = df.dropna()
+
+print(new_df.to_string())
+
+df2 = pd.read_csv('newdata.csv')
+
+df2.dropna(inplace=True)
+
+print(df2.to_string())
+
+# Replace Empty Values
+
+df3 = pd.read_csv('newdata.csv')
+
+df3.fillna(130, inplace=True)
+
+print(df3.to_string())
+
+
+# Replace only for a specific column
+
+df4 = pd.read_csv('newdata.csv')
+
+df4.fillna({'Calories': 130}, inplace=True)
+
+print(df4.to_string())
+
+
+# remove duplicates
+
+print(df.duplicated())
+
+
+# Pandas - Plotting
+
+import matplotlib.pyplot as plt
+
+dfPlot = pd.read_csv('data.csv')
+
+dfPlot.plot()
+
+plt.show()
+
+
+# Scatter Plot
+
+dfPlot.plot(kind='scatter', x='Duration', y='Calories')
+
+plt.show()
+
+# Histogram
+
+dfPlot['Duration'].plot(kind= 'hist')
+
+plt.show()
+
+
+
+
